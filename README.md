@@ -1,117 +1,140 @@
+📘 Resumo Completo para a Certificação AZ-104 – Administrador do Azure
+Este documento reúne, de forma clara e detalhada, os principais conteúdos cobrados na certificação Microsoft Azure Administrator Associate (AZ-104). A linguagem é objetiva, didática e ideal para revisões e aplicação prática no dia a dia profissional.
 
-# 📘 Resumo Completo para a Certificação AZ-104 – Administrador do Azure
+☁️ 1. Gerenciamento de Identidade no Azure
+🔐 Azure Active Directory (Azure AD)
+Serviço de gerenciamento de identidades baseado na nuvem.
 
-Este documento reúne, de forma clara e detalhada, os principais conteúdos cobrados na certificação **Microsoft Azure Administrator Associate (AZ-104)**. A linguagem é acessível, direta ao ponto e pensada para revisões e aplicação prática no dia a dia.
+Administra usuários, grupos, dispositivos e autenticação.
 
----
+Funções comuns: Global Admin, User Admin, Azure AD Admin.
 
-## ☁️ 1. Gerenciamento de Identidade no Azure
+Recursos:
 
-### 🔐 Azure Active Directory (Azure AD)
-- Serviço de identidade baseado em nuvem do Azure.
-- Permite gerenciamento de usuários, grupos, dispositivos e autenticação.
-- **Funções comuns**: Azure AD Admin, Global Admin, User Admin.
-- **Conceitos chave**:
-  - **RBAC (Role-Based Access Control)**: controle de permissões com base em funções atribuídas.
-  - **IAM (Identity and Access Management)**: gestão de acesso aos recursos.
-  - **Condições de acesso**: políticas de segurança baseadas em contexto (localização, dispositivo etc).
+RBAC (Role-Based Access Control): atribuição de permissões com base em papéis.
 
-### 🔄 Sincronização com AD local
-- Usando o **Azure AD Connect** para sincronizar identidades locais com o Azure AD.
-- Autenticação híbrida.
+IAM (Identity and Access Management): controle de acesso centralizado.
 
----
+Condições de acesso: aplicam políticas baseadas em localização, dispositivo, risco etc.
 
-## 🏗️ 2. Governança e Conformidade
+🔄 Integração com Active Directory local
+Uso do Azure AD Connect para sincronização.
 
-### 📋 Grupos de Gerenciamento, Assinaturas e Grupos de Recursos
-- Organização hierárquica dos recursos.
-- Grupos de gerenciamento → Assinaturas → Grupos de recursos → Recursos.
+Suporte a autenticação híbrida.
 
-### 📜 Azure Policies
-- Aplicação de regras e padrões de compliance (ex: restringir tipos de VMs, localizações etc).
+🛡️ 2. Governança, Compliance e Controle de Custos
+🗂️ Hierarquia de gerenciamento
+Grupos de gerenciamento → Assinaturas → Grupos de recursos → Recursos.
 
-### 💰 Controle de Custos
-- **Tags**: categorização de recursos para rastrear custos.
-- **Orçamentos e alertas**: monitoramento financeiro com o Cost Management.
+📜 Azure Policy
+Regras de conformidade e restrições (ex: localização, tipos de recursos).
 
----
+💸 Monitoramento de Custos
+Tags: categorização para análise de gastos.
 
-## 📦 3. Implementação e Gerenciamento de Recursos de Computação
+Budget e alertas no Azure Cost Management.
 
-### 🖥️ Máquinas Virtuais (VMs)
-- Criação, configuração, inicialização, automação.
-- **Discos**: OS Disk, Data Disk, Unmanaged vs Managed.
-- **Snapshots e imagens personalizadas**.
+📦 3. Recursos de Computação
+🖥️ Máquinas Virtuais (VMs)
+Criação, inicialização e automação.
 
-### 📊 Escalonamento
-- **Vertical**: mais recursos (CPU/RAM) para uma VM.
-- **Horizontal**: mais instâncias (VMs).
-- **VMSS (Virtual Machine Scale Sets)**: escalam automaticamente com base na demanda.
+Tipos de disco: SO, dados, gerenciados e não gerenciados.
 
-### ⚙️ Alta Disponibilidade
-- **Availability Sets**: protegem contra falhas de hardware e atualizações simultâneas.
-- **Availability Zones**: isolamento físico entre zonas da mesma região.
+Snapshots, backups e imagens personalizadas.
 
----
+⚖️ Escalabilidade e Alta Disponibilidade
+Vertical (aumenta CPU/RAM).
 
-## 🌐 4. Implementação e Gerenciamento de Redes Virtuais
+Horizontal (escalonamento com VMSS).
 
-### 🔌 Redes Virtuais (VNets) e Sub-redes
-- Comunicação entre recursos do Azure.
-- Divisão lógica da rede.
+Availability Sets e Zones: garantem tolerância a falhas e atualizações.
 
-### 🧱 NSG (Network Security Groups)
-- Controle de tráfego de entrada/saída baseado em regras.
+🌐 4. Rede Virtual e Segurança
+🧭 Redes Virtuais (VNets)
+Segmentação e comunicação entre recursos.
 
-### 🔄 VPN Gateway e ExpressRoute
-- VPN Gateway: conecta on-premise ao Azure via internet segura.
-- ExpressRoute: conexão dedicada com alta velocidade e baixa latência.
+Sub-redes e endereçamento IP.
 
-### 🧭 Azure DNS, Peering e Endpoints de Serviço
-- Resolução de nomes, conexão entre VNets, acesso seguro a serviços do Azure.
+🔐 Network Security Groups (NSGs)
+Controle do tráfego com regras de entrada e saída.
 
----
+🔌 Conectividade Híbrida
+VPN Gateway: conexão criptografada via internet.
 
-## 💾 5. Gerenciamento de Armazenamento
+ExpressRoute: conexão privada de alta performance.
 
-### 📁 Tipos de Conta de Armazenamento
-- General-purpose v2, BlobStorage.
-- Hot, Cool e Archive Tiers (acesso frequente, esporádico e raro).
+🌐 Outros componentes
+Azure DNS: gerenciamento de zonas DNS.
 
-### 🧩 Serviços
-- Blob: objetos não estruturados.
-- File: compartilhamentos de arquivos.
-- Queue: mensagens entre componentes.
-- Table: dados NoSQL.
+Peering de VNets: comunicação entre redes virtuais.
 
-### 🔐 Segurança e Acesso
-- Chaves, SAS (Shared Access Signature), RBAC para Storage.
-- Criptografia em repouso e em trânsito.
+Service Endpoints: acesso seguro a serviços PaaS.
 
----
+💾 5. Armazenamento
+📂 Tipos de conta
+General-purpose v2, BlobStorage.
 
-## 🛡️ 6. Monitoramento e Backup
+Camadas: Hot, Cool e Archive.
 
-### 📈 Azure Monitor e Log Analytics
-- Métricas em tempo real e coleta de logs.
-- Workbooks, alertas e dashboards.
+🔧 Serviços
+Blob: objetos não estruturados.
 
-### 💾 Backup e Site Recovery
-- Azure Backup: proteção de dados de VMs, arquivos, SQL, etc.
-- ASR (Azure Site Recovery): recuperação de desastres.
+File: compartilhamento SMB.
 
----
+Queue: mensagens assíncronas.
 
-## 🧩 7. Gerenciamento de Recursos com ARM, CLI e PowerShell
+Table: dados NoSQL.
 
-### 📜 Modelos ARM
-- Implantação declarativa com arquivos JSON.
+🔒 Segurança
+Chaves, SAS (Shared Access Signatures), criptografia, RBAC.
 
-### 💻 Ferramentas
-- Azure CLI e Azure PowerShell: automatização e gestão por linha de comando.
-- Cloud Shell: terminal integrado ao portal Azure.
+📊 6. Monitoramento, Log Analytics e Backup
+📈 Azure Monitor
+Coleta de métricas e logs.
 
----
+Workbooks, alertas e visualizações.
 
-> ✅ Este resumo foi elaborado como parte do meu preparo para a certificação AZ-104 e reflete minha forma de entender e revisar os conteúdos. Ideal para reforçar os principais pontos antes da prova ou aplicar na prática.
+🔍 Log Analytics
+Consulta de dados com KQL (Kusto Query Language).
+
+Integração com Azure Monitor.
+
+Permite análises com dados de auditoria, desempenho e segurança.
+
+Tabelas comuns:
+
+Syslog: mensagens de log do Linux.
+
+Heartbeat: status de conectividade de agentes.
+
+Acesso via: Monitor > Logs no portal Azure.
+
+Workspace: armazena e organiza dados de log.
+
+Vantagens:
+Pronto para uso em auditoria e análise de segurança.
+
+Diversas consultas predefinidas.
+
+Alta integração com serviços do Azure.
+
+📂 Backup e Recuperação
+Azure Backup: proteção de dados de VMs, arquivos e bancos.
+
+Azure Site Recovery (ASR): failover e continuidade de negócios.
+
+🔍 Network Watcher
+Para capturar tráfego em uma VM, é necessário:
+
+Extensão do Agente Observador de Rede.
+
+Permite análise de conexão, captura de pacotes e logs de fluxo.
+
+⚙️ 7. Automatização e Gerenciamento via Código
+🧱 ARM Templates
+Implantação declarativa com arquivos JSON.
+
+💻 CLI, PowerShell e Cloud Shell
+Azure CLI e Azure PowerShell: automação e scripting.
+
+Cloud Shell: terminal integrado no portal Azure.
